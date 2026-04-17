@@ -104,6 +104,8 @@
     &__list {
       &.swiper-wrapper {
         display: grid;
+
+        justify-content: space-around;
         gap: 1rem 2rem;
         grid-template-columns: repeat(4, 1fr);
       }
