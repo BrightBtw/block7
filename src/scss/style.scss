@@ -1,17 +1,5 @@
-$bgColor: #24292e;
-$text: #fff;
+@import './_normalize', './_fonts', './_variables';
 
-@font-face {
-  font-family: 'Comic';
-  src: url('../fonts/comic.ttf') format('truetype');
-  font-weight: normal;
-  font-style: italic;
-}
-
-body {
-  padding: 1rem;
-  margin: 0;
-  font-family: Comic, sans-serif;
-  background-color: $bgColor;
-  color: $text;
-}
+@import './blocks/_header', './blocks/_main', './blocks/_main_brands',
+  './blocks/_main_devices', './blocks/_main_price', './blocks/_nav_sidebar',
+  './blocks/_sidebars', './blocks/_footer';
