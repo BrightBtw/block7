@@ -1294,8 +1294,8 @@ input[type='radio']:checked + .main__tab-label {
       margin-right: -1.5rem; }
     .brands__list {
       display: grid;
-      justify-content: space-around;
-      gap: 1rem 2rem;
+      justify-content: space-evenly;
+      gap: 1rem 1.5rem;
       grid-template-columns: repeat(3, auto); }
     .brands__controls {
       display: flex; }
@@ -1313,13 +1313,14 @@ input[type='radio']:checked + .main__tab-label {
       padding: 0;
       margin-left: -2rem;
       margin-right: -2rem; }
-    .brands__list.swiper-wrapper {
+    .brands__list {
       display: grid;
-      gap: 1rem 2rem;
-      grid-template-columns: repeat(4, 1fr); }
+      grid-template-columns: repeat(4, auto);
+      justify-content: space-evenly;
+      gap: 1rem 2rem; }
     .brands__controls {
-      margin-top: 0.5rem;
-      display: flex; }
+      display: flex;
+      margin-top: 0.5rem; }
     .brands__item:nth-child(n + 9) {
       display: none; }
     .brands__item-tablet li, .brands__toggle--hidden, .brands__toggle-1120px--hidden, .brands__toggle-720px--hidden {
@@ -1339,12 +1340,11 @@ input[type='radio']:checked + .main__tab-label {
     line-height: 1.5rem;
     letter-spacing: -0.2px;
     margin-right: auto; }
-  .devices__item button {
-    margin-left: auto; }
   .devices__item {
     display: flex;
     flex-direction: column;
     height: 10rem;
+    justify-content: space-between;
     background-color: white;
     border-radius: 0.375rem;
     border: 0.0625rem solid #eaeaea;
@@ -1355,9 +1355,9 @@ input[type='radio']:checked + .main__tab-label {
       .devices__item {
         width: 15rem; } }
   .devices__go-button {
-    transform: translateY(3.875rem);
     height: 2.5rem;
-    width: 2.5rem; }
+    width: 2.5rem;
+    margin-left: auto; }
   .devices__toggle {
     display: flex;
     align-items: center;
@@ -1381,8 +1381,8 @@ input[type='radio']:checked + .main__tab-label {
     .devices__list {
       display: grid;
       grid-template-columns: repeat(3, auto);
-      justify-content: space-around;
-      gap: 1.5rem; }
+      justify-content: space-evenly;
+      gap: 1rem 1.5rem; }
     .devices__controls {
       display: flex; }
     .devices__item:nth-child(n + 4) {
@@ -1403,9 +1403,9 @@ input[type='radio']:checked + .main__tab-label {
       display: flex; }
     .devices__list {
       display: grid;
-      justify-content: space-around;
+      justify-content: space-evenly;
       grid-template-columns: repeat(4, auto);
-      gap: 1.5rem; }
+      gap: 1rem 2rem; }
     .devices__item:nth-child(n + 5) {
       display: none; }
   #devices__toggle--hidden {
