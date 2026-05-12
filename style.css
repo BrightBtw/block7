@@ -1181,8 +1181,6 @@ input[type='radio']:checked + .main__tab-label {
   .main__text--second {
     display: block;
     margin-top: 1rem; }
-  .main__highlight {
-    display: none; }
   .main__container {
     display: flex;
     flex-direction: column;
