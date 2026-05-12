@@ -90,7 +90,7 @@
     </header>
 
     <main class="main">
-      <aside class="nav-sidebar">
+      <aside class="nav-sidebar hidden">
         <nav class="nav-sidebar__nav">
           <div
             class="nav-sidebar__button-wrapper nav-sidebar__toggle-container"
@@ -260,7 +260,7 @@
             </div>
           </div>
 
-          <aside class="feedback-sidebar drawer">
+          <aside class="feedback-sidebar drawer hidden">
             <div class="feedback-sidebar__close-wrapper drawer__close-wrapper">
               <button
                 class="feedback-sidebar__close-button drawer__close-button"
@@ -326,7 +326,7 @@
             </div>
           </aside>
 
-          <aside class="callback-sidebar drawer">
+          <aside class="callback-sidebar drawer hidden">
             <div class="callback-sidebar__close-wrapper drawer__close-wrapper">
               <button
                 class="callback-sidebar__close-button drawer__close-button"
@@ -452,14 +452,38 @@
                   очередь, советуют нас родным и близким.
                 </span>
               </p>
-              <button class="main__expand-button">
-                <img
-                  class="main__expand-icon"
-                  src="./img/ic/expand.svg"
-                  alt="expand"
-                />
-                Читать далее
-              </button>
+              <p class="main__text main__text--third hidden">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Architecto, soluta. Possimus ipsa architecto recusandae ut
+                officia necessitatibus soluta hic! Delectus, error earum vero
+                ratione atque quam, sint hic non mollitia, dolorem iste odio
+                quod repellat corrupti in corporis repellendus fugit autem
+                eveniet maiores dolorum ex placeat. Iusto ullam delectus qui
+                necessitatibus similique saepe unde officia enim vel nemo labore
+                doloremque iste ad debitis incidunt, mollitia quaerat itaque
+                neque, eligendi quibusdam libero. At molestiae obcaecati ut modi
+                ducimus laudantium quidem libero voluptatem nulla, harum porro,
+                id doloribus voluptas rerum aut veritatis excepturi! Iure maxime
+                asperiores inventore saepe? Ex maiores aut quas!</p
+              >
+              <div class="main__controls">
+                <button class="main__expand-button">
+                  <img
+                    class="main__expand-icon"
+                    src="./img/ic/expand.svg"
+                    alt="expand"
+                  />
+                  Читать далее
+                </button>
+                <button class="main__hiden-button">
+                  <img
+                    class="main__hiden-icon arrow__icon--flip"
+                    src="./img/ic/expand.svg"
+                    alt="hiden"
+                  />
+                  Скрыть текст
+                </button>
+              </div>
             </div>
             <div class="main__image-wrapper">
               <img
@@ -602,7 +626,7 @@
             </button>
             <button id="brands__toggle--hidden" class="brands__toggle">
               <img
-                class="brands__toggle-icon brands__toggle-icon--flip"
+                class="brands__toggle-icon arrow__icon--flip"
                 src="./img/expand.svg"
                 alt="expand"
               />
@@ -688,7 +712,7 @@
             </button>
             <button id="devices__toggle--hidden" class="devices__toggle">
               <img
-                class="devices__toggle-icon devices__toggle-icon--flip"
+                class="devices__toggle-icon arrow__icon--flip"
                 src="./img/expand.svg"
                 alt="expand"
               />

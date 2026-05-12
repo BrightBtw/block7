@@ -5,15 +5,46 @@
   width: 100%;
   height: 100%;
   background: $snow;
-  backdrop-filter: blur(8px);
+  backdrop-filter: blur(0.5rem);
   z-index: 12;
   display: none;
+}
+
+.hidden {
+  display: none;
+}
+
+.arrow__icon--flip {
+  transform: rotate(180deg);
 }
 
 .main {
   &__title-wrapper {
     @include flexCenter;
     margin-bottom: 1.5rem;
+  }
+
+  &__controls {
+    @include flexCenter;
+    font-family: $fontMedium;
+    margin: 1rem 0;
+  }
+
+  &__hiden-button,
+  &__expand-button {
+    align-items: center;
+    height: 1.5rem;
+    line-height: 1.5rem;
+    letter-spacing: -0.02px;
+    color: $gunmetal;
+  }
+
+  &__expand-button {
+    display: flex;
+  }
+
+  &__hiden-button {
+    display: none;
   }
 
   &__container {
@@ -68,13 +99,8 @@
     display: none;
   }
 
-  &__expand-button {
-    @include flexCenter;
-    height: 1.5rem;
-    margin: 1rem 0;
-    color: $gunmetal;
-    line-height: 1.5rem;
-    letter-spacing: -0.02px;
+  &__text--third {
+    margin-top: 1rem;
   }
 
   /* Стили для текста в основной части */
@@ -120,9 +146,10 @@ input[type='radio']:checked + .main__tab-label {
 @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
   .main {
     &__text--second {
-      display: inline;
+      display: block;
       margin-top: 1rem;
     }
+
     &__container {
       @include flexColumn;
       row-gap: 2rem;
@@ -208,13 +235,13 @@ input[type='radio']:checked + .main__tab-label {
     }
 
     &__text--second {
-      display: inline;
+      display: block;
       margin-top: 1rem;
     }
 
-    &__expand-button {
+    &__expand-button,
+    &__hiden-button {
       margin: 0.875px 0 0 0;
-      font-family: $fontMedium;
     }
 
     &__tabs-group {

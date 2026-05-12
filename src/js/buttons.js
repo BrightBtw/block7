@@ -1,118 +1,10 @@
-// //=================== button toggle ===================\\
-// const buttonVisibleBrands = document.querySelector('#brands__toggle--visible')
-// const buttonShowBrands = document.querySelector('#brands__toggle--hidden')
-// const parent = document.querySelector('.brands__list')
-
-// buttonVisibleBrands.addEventListener('click', () => {
-//   // 1. Находим все элементы внутри блока
-//   const elements = parent.querySelectorAll('*')
-//   elements.forEach((el) => {
-//     if (window.getComputedStyle(el).display === 'none') {
-//       el.style.setProperty('display', 'flex')
-//     }
-//     buttonShowBrands.style.display = 'flex'
-//     buttonVisibleBrands.style.display = 'none'
-//   })
-// })
-
-// buttonShowBrands.addEventListener('click', () => {
-//   const elements = parent.querySelectorAll('*')
-
-//   elements.forEach((el) => {
-//     if (el.style.display === 'flex') {
-//       el.style.display = 'none'
-//     }
-//     buttonVisibleBrands.style.display = 'flex'
-//     buttonShowBrands.style.display = 'none'
-//   })
-// })
-
-// //=================== button devices ===================\\
-// const buttonVisibleDevices = document.querySelector('#devices__toggle--visible')
-// const buttonShowDevices = document.querySelector('#devices__toggle--hidden')
-// const parentDevices = document.querySelector('.devices__list')
-
-// buttonVisibleDevices.addEventListener('click', () => {
-//   // 1. Находим все элементы внутри блока
-//   const elements = parentDevices.querySelectorAll('*')
-//   elements.forEach((el) => {
-//     if (window.getComputedStyle(el).display === 'none') {
-//       // 3. Присваиваем style flex
-//       el.style.setProperty('display', 'flex')
-//     }
-//     buttonVisibleDevices.style.display = 'none'
-//     buttonShowDevices.style.display = 'flex'
-//   })
-// })
-
-// buttonShowDevices.addEventListener('click', () => {
-//   const elements = parentDevices.querySelectorAll('*')
-
-//   elements.forEach((el) => {
-//     if (el.style.display === 'flex') {
-//       el.style.display = 'none'
-//     }
-//     buttonShowDevices.style.display = 'none'
-//     buttonVisibleDevices.style.display = 'flex'
-//   })
-// })
-
-// //=================== button menu ===================\\
-// const buttonCloseMenu = document.querySelector('.sidebar__button--burger_exit')
-// const buttonOpenMenu = document.querySelector('.menu__button')
-// const buttonFeedBackClose = document.querySelector('.feedback__button--close')
-// const buttonFeedBackOpen = document.querySelectorAll('.feedback__button')
-// const buttonCallBackClose = document.querySelector('.callback__button--close')
-// const buttonCallBackkOpen = document.querySelectorAll('.callback__button')
-
-// const overlay = document.querySelector('.overlay')
-
-// const sidebarFeedback = document.querySelector('.sidebar__feedback')
-// const sidebarСallback = document.querySelector('.sidebar__callback')
-// const sidebarMenu = document.querySelector('.sidebar__menu')
-
-// buttonCallBackkOpen.forEach(function (btn) {
-//   btn.addEventListener('click', function () {
-//     sidebarFeedback.style.display = 'flex'
-//     sidebarСallback.style.display = 'none'
-//     overlay.style.display = 'block'
-//   })
-// })
-
-// buttonCallBackClose.addEventListener('click', function () {
-//   sidebarFeedback.style.display = 'none'
-//   sidebarСallback.style.display = 'none'
-//   overlay.style.display = 'none'
-// })
-
-// buttonFeedBackOpen.forEach(function (btn) {
-//   btn.addEventListener('click', function () {
-//     sidebarFeedback.style.display = 'none'
-//     sidebarСallback.style.display = 'flex'
-//     overlay.style.display = 'block'
-//   })
-// })
-// buttonFeedBackClose.addEventListener('click', function () {
-//   sidebarFeedback.style.display = 'none'
-//   sidebarСallback.style.display = 'none'
-//   overlay.style.display = 'none'
-// })
-
-// buttonOpenMenu.addEventListener('click', function () {
-//   sidebarMenu.style.display = 'flex'
-//   overlay.style.display = 'block'
-// })
-// buttonCloseMenu.addEventListener('click', function () {
-//   sidebarMenu.style.display = 'none'
-//   overlay.style.display = 'none'
-// })
-
 //=================== button toggle ===================\\
 const buttonVisibleBrands = document.querySelector('#brands__toggle--visible')
 const buttonShowBrands = document.querySelector('#brands__toggle--hidden')
 const parent = document.querySelector('.brands__list')
+const screenWidth = window.innerWidth
 
-buttonVisibleBrands.addEventListener('click', () => {
+buttonVisibleBrands.addEventListener('click', function () {
   const elements = parent.querySelectorAll('*')
   elements.forEach((el) => {
     if (window.getComputedStyle(el).display === 'none') {
@@ -123,7 +15,7 @@ buttonVisibleBrands.addEventListener('click', () => {
   })
 })
 
-buttonShowBrands.addEventListener('click', () => {
+buttonShowBrands.addEventListener('click', function () {
   const elements = parent.querySelectorAll('*')
   elements.forEach((el) => {
     if (el.style.display === 'flex') {
@@ -139,7 +31,7 @@ const buttonVisibleDevices = document.querySelector('#devices__toggle--visible')
 const buttonShowDevices = document.querySelector('#devices__toggle--hidden')
 const parentDevices = document.querySelector('.devices__list')
 
-buttonVisibleDevices.addEventListener('click', () => {
+buttonVisibleDevices.addEventListener('click', function () {
   const elements = parentDevices.querySelectorAll('*')
   elements.forEach((el) => {
     if (window.getComputedStyle(el).display === 'none') {
@@ -150,7 +42,7 @@ buttonVisibleDevices.addEventListener('click', () => {
   })
 })
 
-buttonShowDevices.addEventListener('click', () => {
+buttonShowDevices.addEventListener('click', function () {
   const elements = parentDevices.querySelectorAll('*')
   elements.forEach((el) => {
     if (el.style.display === 'flex') {
@@ -165,62 +57,103 @@ buttonShowDevices.addEventListener('click', () => {
 const buttonCloseMenu = document.querySelector(
   '.nav-sidebar__button--burger-exit'
 )
-const buttonOpenMenu = document.querySelector('.icon-button--burger') // класс кнопки бургер в шапке
+const buttonOpenMenu = document.querySelector('.icon-button--burger')
 const buttonFeedBackClose = document.querySelector(
   '.feedback-sidebar__close-button'
 )
-const buttonFeedBackOpen = document.querySelectorAll('.feedback__button') // классы кнопок открытия формы обратной связи (не менялись, они в шапке и левом сайдбаре)
+const buttonFeedBackOpen = document.querySelectorAll('.feedback__button')
 const buttonCallBackClose = document.querySelector(
   '.callback-sidebar__close-button'
 )
-const buttonCallBackOpen = document.querySelectorAll('.callback__button') // классы кнопок открытия формы заказа звонка
+const buttonCallBackOpen = document.querySelectorAll('.callback__button')
 
 const overlay = document.querySelector('.overlay')
 
 const sidebarFeedback = document.querySelector('.feedback-sidebar')
 const sidebarCallback = document.querySelector('.callback-sidebar')
 const sidebarMenu = document.querySelector('.nav-sidebar')
+const drawerClose = document.querySelectorAll('.drawer__close-button')
 
 // Открытие панели заказа звонка (callback)
-buttonCallBackOpen.forEach(function (btn) {
+buttonCallBackOpen.forEach((btn) => {
   btn.addEventListener('click', function () {
-    sidebarCallback.style.display = 'flex'
-    sidebarFeedback.style.display = 'none'
+    sidebarCallback.classList.remove('hidden')
+    sidebarFeedback.classList.add('hidden')
     overlay.style.display = 'block'
   })
 })
 
 // Закрытие панели заказа звонка (callback)
 buttonCallBackClose.addEventListener('click', function () {
-  sidebarCallback.style.display = 'none'
-  sidebarFeedback.style.display = 'none'
+  sidebarCallback.classList.add('hidden')
+  sidebarFeedback.classList.add('hidden')
   overlay.style.display = 'none'
 })
 
 // Открытие панели обратной связи (feedback)
-buttonFeedBackOpen.forEach(function (btn) {
+buttonFeedBackOpen.forEach((btn) => {
   btn.addEventListener('click', function () {
-    sidebarFeedback.style.display = 'flex'
-    sidebarCallback.style.display = 'none'
+    sidebarFeedback.classList.remove('hidden')
+    // sidebarCallback.style.display = 'none'
+    sidebarCallback.classList.add('hidden')
     overlay.style.display = 'block'
   })
 })
 
 // Закрытие панели обратной связи (feedback)
 buttonFeedBackClose.addEventListener('click', function () {
-  sidebarFeedback.style.display = 'none'
-  sidebarCallback.style.display = 'none'
+  sidebarFeedback.classList.add('hidden')
+  sidebarCallback.classList.add('hidden')
   overlay.style.display = 'none'
 })
 
 // Открытие главного меню (левая панель)
 buttonOpenMenu.addEventListener('click', function () {
-  sidebarMenu.style.display = 'flex'
+  sidebarMenu.classList.remove('hidden')
   overlay.style.display = 'block'
 })
 
-// Закрытие главного меню
+// Закрытие главного меню (левая панель)
 buttonCloseMenu.addEventListener('click', function () {
-  sidebarMenu.style.display = 'none'
+  sidebarMenu.classList.add('hidden')
   overlay.style.display = 'none'
+})
+
+// Закрытие модального окна по кнопке esc
+document.addEventListener('keydown', function (evt) {
+  if (evt.key === 'Escape' || evt.key === 'Esc') {
+    sidebarCallback.classList.add('hidden')
+    sidebarFeedback.classList.add('hidden')
+    overlay.style.display = 'none'
+    if (screenWidth < 1366) {
+      sidebarMenu.classList.add('hidden')
+    }
+  }
+})
+
+// Закрытие модального окна по клику вне области
+overlay.addEventListener('click', function () {
+  sidebarCallback.classList.add('hidden')
+  sidebarFeedback.classList.add('hidden')
+  overlay.style.display = 'none'
+  if (screenWidth < 1366) {
+    sidebarMenu.classList.add('hidden')
+  }
+})
+
+const mainButtonExpend = document.querySelector('.main__expand-button')
+const mainHidenButton = document.querySelector('.main__hiden-button')
+const mainTextThird = document.querySelector('.main__text--third')
+const highlight = document.querySelector('.main__highlight')
+
+mainButtonExpend.addEventListener('click', () => {
+  mainButtonExpend.style.display = 'none'
+  mainHidenButton.style.display = 'flex'
+  mainTextThird.classList.remove('hidden')
+})
+
+mainHidenButton.addEventListener('click', () => {
+  mainButtonExpend.style.display = 'flex'
+  mainHidenButton.style.display = 'none'
+  mainTextThird.classList.add('hidden')
 })
