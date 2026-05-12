@@ -1144,10 +1144,6 @@ a {
     font-family: "TT Lakes Medium", sans-serif; }
   .main__tab-input {
     display: none; }
-  .main__text--second {
-    display: none; }
-  .main__text--third {
-    margin-top: 1rem; }
   .main__text-wrapper {
     width: auto;
     padding: 0 1rem;
@@ -1159,6 +1155,25 @@ a {
     text-align: center; }
   .main__actions {
     display: none; }
+  .main__text-wrapper .main__text--first {
+    display: block; }
+  .main__text-wrapper .main__text--second,
+  .main__text-wrapper .main__text--third {
+    display: none;
+    margin-top: 1rem; }
+  .main__text-wrapper.is-open .main__text--second,
+  .main__text-wrapper.is-open .main__text--third {
+    display: block; }
+  @media (min-width: 768px) and (max-width: 1365px) {
+    .main__text-wrapper .main__text--second {
+      display: block; }
+    .main__text-wrapper.is-open .main__text--third {
+      display: block; } }
+  @media (min-width: 1366px) {
+    .main__text-wrapper .main__text--second {
+      display: block; }
+    .main__text-wrapper.is-open .main__text--third {
+      display: block; } }
 
 input[type='radio']:checked + .main__tab-label {
   border-radius: 6px;
@@ -1178,9 +1193,6 @@ input[type='radio']:checked + .main__tab-label {
   border-top: 1px solid #d9fff5; }
 
 @media (min-width: 768px) and (max-width: 1365px) {
-  .main__text--second {
-    display: block;
-    margin-top: 1rem; }
   .main__container {
     display: flex;
     flex-direction: column;
@@ -1238,9 +1250,6 @@ input[type='radio']:checked + .main__tab-label {
       line-height: 1.25rem;
       padding-left: 0;
       margin-right: 1.25rem; }
-    .main__text--second {
-      display: block;
-      margin-top: 1rem; }
     .main__expand-button, .main__hiden-button {
       margin: 0.875px 0 0 0; }
     .main__tabs-group {
