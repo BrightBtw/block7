@@ -141,19 +141,18 @@ overlay.addEventListener('click', function () {
   }
 })
 
-const mainButtonExpend = document.querySelector('.main__expand-button')
-const mainHidenButton = document.querySelector('.main__hiden-button')
-const mainTextThird = document.querySelector('.main__text--third')
-const highlight = document.querySelector('.main__highlight')
+const mainButtonExpend = document.getElementById('main__expand-button')
+const mainHidenButton = document.getElementById('main__hiden-button')
+const container = document.querySelector('.main__text-wrapper')
 
 mainButtonExpend.addEventListener('click', () => {
+  container.classList.toggle('is-open')
   mainButtonExpend.style.display = 'none'
   mainHidenButton.style.display = 'flex'
-  mainTextThird.classList.remove('hidden')
 })
 
 mainHidenButton.addEventListener('click', () => {
+  container.classList.toggle('is-open')
   mainButtonExpend.style.display = 'flex'
   mainHidenButton.style.display = 'none'
-  mainTextThird.classList.add('hidden')
 })

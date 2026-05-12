@@ -95,14 +95,6 @@
     display: none;
   }
 
-  &__text--second {
-    display: none;
-  }
-
-  &__text--third {
-    margin-top: 1rem;
-  }
-
   /* Стили для текста в основной части */
   &__text-wrapper {
     width: auto;
@@ -120,6 +112,45 @@
   /* Стили для изображения в основной части */
   &__actions {
     display: none;
+  }
+
+  &__text-wrapper {
+    .main__text--first {
+      display: block;
+    }
+
+    .main__text--second,
+    .main__text--third {
+      display: none;
+      margin-top: 1rem;
+    }
+
+    &.is-open {
+      .main__text--second,
+      .main__text--third {
+        display: block;
+      }
+    }
+
+    @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
+      .main__text--second {
+        display: block;
+      }
+
+      &.is-open .main__text--third {
+        display: block;
+      }
+    }
+
+    @media (min-width: $desktop) {
+      .main__text--second {
+        display: block;
+      }
+
+      &.is-open .main__text--third {
+        display: block;
+      }
+    }
   }
 }
 
@@ -145,11 +176,6 @@ input[type='radio']:checked + .main__tab-label {
 
 @media (min-width: $tablet) and (max-width: ($desktop - 1px)) {
   .main {
-    &__text--second {
-      display: block;
-      margin-top: 1rem;
-    }
-
     &__container {
       @include flexColumn;
       row-gap: 2rem;
@@ -232,11 +258,6 @@ input[type='radio']:checked + .main__tab-label {
       line-height: 1.25rem;
       padding-left: 0;
       margin-right: 1.25rem;
-    }
-
-    &__text--second {
-      display: block;
-      margin-top: 1rem;
     }
 
     &__expand-button,
